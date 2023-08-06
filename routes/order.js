@@ -12,3 +12,21 @@ router.post('/', (req, res, next) => {
         message: 'Order was created'
     })
 })
+
+
+router.get('/:orderID', (req, res, next) => {
+    res.status(200).json({
+        message: 'Order details',
+        id: req.params.orderID
+    })
+})
+
+router.delete('/:orderID', (req, res, next) => {
+    res.status(200).json({
+        message: 'Order Deleted',
+        id: req.params.orderID
+    })
+})
+
+
+module.exports = router;

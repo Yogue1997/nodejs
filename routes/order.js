@@ -11,7 +11,7 @@ router.post('/', (req, res, next) => {
     res.status(201).json({
         message: 'Order was added'
     })
-})
+}),
 
 
 router.get('/:orderID', (req, res, next) => {

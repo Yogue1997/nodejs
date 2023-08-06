@@ -2,10 +2,13 @@ const express = require('express');
 const app = express()
 const morgan = require('morgan');
 const bodyParser = require('body-parser');
-
+const mongoose = require('mongoose');
 const productRoutes = require('./routes/products');
-
 const orderRoutes = require('./routes/order');
+
+mongoose.connect('mongodb+srv://yyogue:' + process.env.MONGO_ATLAS_PW + '@e-commerce.4dmlnlf.mongodb.net/', {
+    useMongoClient: true
+})
 
 app.use(morgan('dev'))
 app.use(bodyParser.urlencoded({ extended: false }))

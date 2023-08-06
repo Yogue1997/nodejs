@@ -21,6 +21,8 @@ app.use((req, res, next) => {
     next();
 })
 
+//mongodb+srv://yyogue:<password>@e-commerce.4dmlnlf.mongodb.net/
+
 app.use('/products', productRoutes);
 app.use('/orders', orderRoutes);
 

@@ -3,13 +3,13 @@ const router = express.Router();
 
 router.get('/', (req, res, next) => {
     res.status(200).json({
-        message: 'Orders were fetched'
+        message: 'Orders were created'
     })
 })
 
 router.post('/', (req, res, next) => {
     res.status(201).json({
-        message: 'Order was created'
+        message: 'Order was added'
     })
 })
 

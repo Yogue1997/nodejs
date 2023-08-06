@@ -1,12 +1,15 @@
 const express = require('express');
 const app = express()
+const morgan = require('morgan');
 
-const productRoutes = require('./routes/products')
+const productRoutes = require('./routes/products');
 
-const orderRoutes = require('./routes/order')
+const orderRoutes = require('./routes/order');
 
-app.use('/products', productRoutes)
-app.use('/orders', orderRoutes)
+app.use(morgan('dev'))
+
+app.use('/products', productRoutes);
+app.use('/orders', orderRoutes);
 
 
 module.exports = app;
